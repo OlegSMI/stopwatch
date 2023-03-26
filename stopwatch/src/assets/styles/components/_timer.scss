@@ -1,7 +1,4 @@
 .timer {
-    width: 225px;
-    height: 120px;
-    background: $darkGrey;
 
     .time__panel {
         font-family: 'Gotham Pro';
@@ -13,7 +10,6 @@
         color: $grey;
         border-bottom: 1px solid $grey;
         transition: color border-bottom 0.2s ease;
-
     }
 
     .play__panel {
@@ -58,8 +54,6 @@
                 background-color: $grey;
                 transition: background-color 0.2s ease;
             }
-
-
         }
     }
 }

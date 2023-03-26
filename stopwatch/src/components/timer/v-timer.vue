@@ -68,7 +68,7 @@ export default {
             else {
                 time = `${this.seconds}`
             }
-            return time
+            return time;
         }
     },
 }

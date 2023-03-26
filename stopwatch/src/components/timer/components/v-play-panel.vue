@@ -30,7 +30,6 @@ export default {
     methods: {
         pinpoiting(e) {            
             this.targetTimer = e.target.closest(".timer");
-
             e.target.classList.contains("pause") ? 
                 this.$emit('pause') : this.$emit('play');
             this.isPlay = !this.isPlay
