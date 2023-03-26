@@ -2,7 +2,57 @@
 @import 
     './nullstyle';
 
+// Abstracts
+@import
+'./abstracts/variables';
+
 // Components
 @import
     './components/addButton',
     './components/timer';
+
+
+body {
+    background-color: #353638;
+    padding: 50px calc(50% - 413px);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .rectangle {
+        width: 225px;
+        height: 120px;
+        background: $darkGrey;
+        margin: 22.5px 25px;
+        transition: all 1s;
+    }
+
+    .timers-list-enter-from, .timers-list-leave-to {
+        opacity: 0;
+        // transform: translateX(30px);
+    }
+    .timers-list-leave-active {
+        position: absolute;
+    }
+}
+
+@media (max-width: 1023.9px){
+    body {
+        padding: 50px calc(50% - 275px);
+    }
+}
+
+@media (max-width: 767.9px) {
+    body {
+        padding: 50px calc(50% - 138px);
+    }
+}
+
+@media (max-width: 319.9px) {
+    body {
+        background-color: red;
+    }
+}
