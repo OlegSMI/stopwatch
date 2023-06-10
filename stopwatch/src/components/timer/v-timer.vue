@@ -16,6 +16,7 @@ export default {
     },
     data() {
         return {
+            milliseconds: 0,
             seconds: 0,
             minutes: 0,
             hours: 0,
@@ -26,7 +27,11 @@ export default {
     methods: {
         play() {
             this.playTimer = setInterval(() => {
-                this.seconds+=1
+                this.milliseconds+=1
+                if (this.milliseconds>=100) {
+                    this.seconds+=1;
+                    this.milliseconds=0;
+                }
                 if(this.checkFull(this.seconds)){
                     this.seconds=0;
                     this.minutes+=1;
@@ -37,7 +42,7 @@ export default {
                     this.seconds=0;
                 }
                 this.time=this.createTimeString()
-            }, 1000)
+            }, 10)
         },
 
         pause() {
